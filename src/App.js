@@ -2,18 +2,47 @@
 import './App.css'
 
 export default function App() {
+  const heros = [
+    'Scarlet Brooks',
+    'Kieran Huynh',
+    'Gavin Wolf',
+    'Cindy Faulkner',
+    'Cierra Acevedo',
+    'Mckenna Cardenas',
+    'Caden Yu',
+    'Hayden Estrada',
+    'Ralph Wright',
+    'Jaylah Rasmussen',
+    'Kayden Velazquez',
+    'Claire Montoya',
+  ]
   const products = [
     { name: 'Adobe Photoshop', price: '$12.99' },
     { name: 'Adobe Illustrator', price: '$9.99' },
-    { name: 'Figma', price: '$7.99' },
+    { name: 'Adobe XD', price: '$7.99' },
+    { name: 'Adobe Indesigns', price: '$7.99' },
+    { name: 'Adobe Dreamweaver', price: '$7.99' },
+    { name: 'Adobe Premier Pro', price: '$7.99' },
+    { name: 'Adobe After Effects', price: '$7.99' },
+    { name: 'Adobe Media Encoder', price: '$7.99' },
   ]
   return (
     <header className="App-header">
       {/* 
       individual
       <Products name={products[0].name} price={products[0].price}></Products> */}
-      <Products product={products[1]}></Products>
-      <Products product={products[2]}></Products>
+      {/* <Products product={products[1]}></Products>
+      <Products product={products[2]}></Products> */}
+
+      {/* <ul>
+        {heros.map((hero) => (
+          <li>{hero}</li>
+        ))}
+      </ul> */}
+
+      {products.map((items) => (
+        <Products product={items}></Products>
+      ))}
     </header>
   )
 }
